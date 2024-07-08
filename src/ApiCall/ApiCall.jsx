@@ -3,7 +3,7 @@ import axios from 'axios' ;
 
 // create Food Data   
 export function FoodIteamCreate(FoodName,FoodCode,FoodImage,FoodCatagory,FoodQuantity,FoodPrice){
-const URL = "https://update-crud-frondend.vercel.app/create" ; 
+const URL = "/create" ; 
 const reqBODY ={
 
     FoodName,
@@ -36,7 +36,7 @@ return axios.post(URL,reqBODY)
 
 export function ReadAll(){
 
-const URL = "https://update-crud-frondend.vercel.app/read" ; 
+const URL = "/read" ; 
 
 return axios.get(URL) 
 .then((res)=>{
@@ -62,7 +62,7 @@ return axios.get(URL)
 
 export function  ReadDatabyID(id){
 
-const URL =`https://update-crud-frondend.vercel.app/read/${id}`; 
+const URL =`/read/${id}`; 
 
 return axios.get(URL) 
 .then((res)=>{
@@ -91,7 +91,7 @@ if(res.status===200){
 
 export function UpdateFoodData(id,FoodName,FoodCode,FoodImage,FoodCatagory,FoodQuantity,FoodPrice){
 
-const URL = `https://update-crud-frondend.vercel.app/update/${id}` ; 
+const URL = `h/update/${id}` ; 
 const reqBODY ={
 
     FoodName,
@@ -127,7 +127,7 @@ return axios.post(URL,reqBODY)
 // Delete Food Product 
 
 export function DeletedData(id){
-const URL= ` https://update-crud-frondend.vercel.app/delete/${id}`; 
+const URL= ` /delete/${id}`; 
 
 
 return axios.get(URL) 
